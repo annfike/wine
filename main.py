@@ -9,14 +9,14 @@ current_year = datetime.datetime.now()
 age = current_year.year - 1920
 
 
-def plural_years(n):
+def get_plural_years(n):
     years = ['год', 'года', 'лет']
     if all((n % 10 == 1, n % 100 != 11)):
         return years[0]
     elif all((2 <= n % 10 <= 4, any((n % 100 < 10, n % 100 >= 20)))):
         return years[1]
     return years[2]
-years = plural_years(age)
+years = get_plural_years(age)
 
 
 excel_data_df = pandas.read_excel(
