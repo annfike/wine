@@ -5,8 +5,8 @@ from http.server import HTTPServer, SimpleHTTPRequestHandler
 import pandas
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-now = datetime.datetime.now()
-age = now.year - 1920
+current_year = datetime.datetime.now()
+age = current_year.year - 1920
 
 
 def plural_years(n):
